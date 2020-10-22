@@ -1,0 +1,697 @@
+/*===========================================
+COMMON CSS
+=============================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #666666;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 960px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.alignLeft {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.alignLeft::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.alignRight {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.alignRight::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clear {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+
+/*===========================================
+TOP HEADER AREA
+=============================================*/
+
+.bg {
+    background-color: #ba2e1f;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topHeader>ul {
+    list-style: none;
+}
+
+.topHeader>ul>li {
+    display: inline-block;
+    position: relative;
+}
+
+.topHeader>ul>li::after {
+    content: "";
+    width: 1px;
+    height: 14px;
+    background: azure;
+    position: absolute;
+    top: 14px;
+    right: 0px;
+}
+
+.topHeader>ul>li:last-child::after {
+    display: none;
+}
+
+.topHeader>ul>li>a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+.topHeader>ul>li>a:hover {
+    color: aqua;
+}
+
+.searchArea {
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.searchArea input[type="text"] {
+    border: none;
+    width: 80%;
+    outline: none;
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.searchArea input[type="text"]:focus::placeholder {
+    color: red;
+}
+
+.searchArea input[type="submit"] {
+    border: none;
+    background: #fff;
+    width: 20%;
+    outline: none;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 68% 42%;
+    transition: background-image .1s;
+}
+
+.searchArea input[type="submit"]:hover {
+    background-image: url(../img/search1.jpg);
+    background-size: 20px;
+    background-position: 68% 42%;
+}
+
+.searchArea input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+
+/*===========================================
+MAIN HEADER AREA
+=============================================*/
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.socialIcon {
+    margin-top: 18px;
+}
+
+.socialIcon>ul {
+    list-style: none;
+}
+
+.socialIcon>ul>li {
+    display: inline-block;
+}
+
+.socialIcon>ul>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+    transition: background-color .3s;
+}
+
+.socialIcon>ul>li:hover a {
+    background: rgb(199, 51, 51);
+}
+
+.socialIcon>ul>li:hover:first-child a {
+    background-color: rgb(0, 89, 255);
+}
+
+.socialIcon>ul>li:nth-child(2):hover a {
+    background-color: dodgerblue;
+}
+
+.socialIcon>ul>li:nth-child(4):hover a {
+    background-color: red;
+}
+
+.socialIcon>ul>li:last-child:hover a {
+    background-color: orange;
+}
+
+
+/*===========================================
+MAIN MENU AREA
+=============================================*/
+
+.mainMenu {
+    background: #2b2b2b;
+    border-radius: 5px;
+    padding: 5px 0px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.mainMenu:before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    display: block;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.mainMenu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mainMenu>ul>li {
+    display: inline-block;
+}
+
+.mainMenu>ul>li>a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 2px;
+    margin: 0px 5px;
+    transition: color .3s;
+    z-index: 5;
+}
+
+.mainMenu>ul>li:hover a {
+    color: #ba2e1f;
+}
+
+
+/*------------------drop down-------------*/
+
+.drpBtn {
+    position: relative;
+    z-index: 5;
+}
+
+.drpBtn:hover .drpDwn {
+    display: block;
+    transform: scaleY(1);
+}
+
+.mainMenu .drpDwn {
+    position: absolute;
+    width: 150px;
+    background: #ba2e1f;
+    border-radius: 3px;
+    top: 33px;
+    left: 0px;
+    transition: transform .5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.mainMenu .drpDwn li {
+    display: block;
+}
+
+.mainMenu .drpDwn li a {
+    display: block;
+    color: white !important;
+    text-decoration: none;
+    padding: 5px 2px;
+    transition: background .2s;
+}
+
+.mainMenu .drpDwn li:hover a {
+    background: #222;
+    border-radius: 3px;
+}
+
+.drpBtn-2:hover .drpDwn-2 {
+    transform: scaleX(1);
+}
+
+.drpBtn-2 {
+    position: relative;
+}
+
+.drpDwn-2 {
+    position: absolute;
+    width: 150px;
+    background: #ba2e1f;
+    border-radius: 3px;
+    top: 0px;
+    left: 150px;
+    transition: transform .5s;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 10;
+}
+
+.mainMenu .drpDwn-2 li:hover a {
+    background: #222 !important;
+    border-radius: 3px;
+}
+
+.mainMenu .drpDwn-2 li a {
+    background: none !important;
+}
+
+.mean-bar .drpDwn-2 {
+    position: unset;
+    background: transparent;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+
+/*===========================================
+SLIDER AREA
+=============================================*/
+
+.sliderArea {
+    max-width: 100%;
+    width: 960px;
+    margin: 30px auto;
+}
+
+.slider div {
+    position: relative;
+}
+
+.slider h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: rgb(255, 0, 64);
+    font-weight: 900;
+}
+
+.slider h1::first-letter {
+    color: green;
+    font-size: 130px;
+}
+
+
+/*===========================================
+SLIDER AREA
+=============================================*/
+
+.hero {
+    overflow: hidden;
+    height: auto;
+}
+
+.heroArea img {
+    margin-right: 40px;
+}
+
+.heroArea img {
+    width: 40%;
+}
+
+.heroArea div {
+    width: 50%;
+    margin-top: 80px;
+}
+
+.heroArea div h2 {
+    font-size: 80px;
+    color: #000;
+    line-height: 1.2em;
+    font-weight: normal;
+}
+
+.heroArea div a {
+    float: right;
+    clear: both;
+    margin-top: 20px;
+    color: #ba2e1f;
+    text-decoration: none;
+}
+
+.heroArea div a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+
+/*===========================================
+ABOUT AREA
+=============================================*/
+
+#service {
+    background: #f2f2f2;
+    padding: 80px 0px;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main h2 {
+    color: #333;
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.main p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.main a {
+    color: #b92d1f;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.main a:hover {
+    color: #333;
+}
+
+
+/* ------------about-----------*/
+
+.main .about {
+    width: 30%;
+}
+
+.main .about img {
+    background: #f2f2f2;
+    border: 1px solid #dfdfdf;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.main .about a {
+    margin-top: 8px;
+}
+
+
+/* ------------services-----------*/
+
+.main .services {
+    width: 32%;
+}
+
+.small img {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.main .services .small {
+    display: flex;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.main .services .last {
+    margin-bottom: 15px;
+}
+
+.small:last-child {
+    margin-bottom: none;
+}
+
+.main .services .text {
+    margin-left: 15px;
+}
+
+.main .services .text h3 {
+    font-size: 15px;
+}
+
+
+/* ------------clients-----------*/
+
+.main .clients {
+    width: 30%;
+}
+
+.main .clients h3 {
+    text-align: center;
+    background-image: url(../img/comma.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 10px;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.main .clients h3 span {
+    font-weight: normal;
+}
+
+.main .clients p {
+    font-size: 13px;
+}
+
+
+/*===========================================
+FOOTER AREA
+=============================================*/
+
+.footerAllDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+.footerAllDiv .footerChild h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.footerAllDiv .footerChild p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.footerAllDiv .footerChild a {
+    color: #b92d1f;
+    text-decoration: none;
+}
+
+.footerAllDiv .footerChild a:hover {
+    color: #828;
+}
+
+.footerAllDiv .footerChild:first-child {
+    width: 19%;
+}
+
+.footerAllDiv .footerChild:first-child p {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.footerAllDiv .footerChild:first-child span {
+    display: block;
+}
+
+.footerAllDiv .footerChild:nth-child(2) {
+    width: 23%;
+}
+
+.footerAllDiv .footerChild:nth-child(2) ul {
+    list-style: none;
+}
+
+.footerAllDiv .footerChild:nth-child(2) ul li {
+    border-bottom: 1px solid #999;
+}
+
+.footerAllDiv .footerChild:nth-child(2) ul li:last-child {
+    border-bottom: none;
+}
+
+.footerAllDiv .footerChild:nth-child(2) ul li a {
+    display: block;
+    color: #666;
+    padding: 3px 0px;
+    background: url(../img/icon.png) no-repeat left;
+    padding-left: 20px;
+}
+
+.footerAllDiv .footerChild:nth-child(2) ul li a:hover {
+    color: #b82c1f;
+}
+
+.footerAllDiv .footerChild:nth-child(3) {
+    width: 20%;
+}
+
+.footerAllDiv .footerChild:nth-child(3) h6 {
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
+
+.footerAllDiv .footerChild:nth-child(3) p {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.footerAllDiv .footerChild:nth-child(3) span {
+    color: #b82c1f;
+}
+
+.footerAllDiv .footerChild:nth-child(3) a:last-child {
+    text-align: right;
+    display: block;
+}
+
+.footerAllDiv .footerChild:last-child {
+    width: 19%;
+}
+
+.footerChild input,
+textarea {
+    width: 100%;
+    padding: 7px;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.footerChild textarea {
+    height: 110px;
+}
+
+.footerChild input[type="submit"] {
+    width: 90px;
+    color: #b82c1f;
+    padding: 7px;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid transparent;
+}
+
+.footerChild input[type="submit"]:hover {
+    background: #b82c1f;
+    color: #fff;
+}
+
+.footerChild input[type="submit"]:focus {
+    border: 2px solid rgb(211, 105, 105);
+    outline: none;
+    transition: none;
+}
+
+.footerChild {
+    border-top: 1px solid #666;
+    padding-top: 15px;
+}
+
+
+/*===========================================
+COPYRIGHT AREA
+=============================================*/
+
+.copy {
+    background: #f2f2f2;
+}
+
+.copy div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.copy div a {
+    color: #919191;
+    text-decoration: none;
+    font-size: 13px;
+}

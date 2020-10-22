@@ -1,0 +1,283 @@
+@media screen and (max-width:991px) {
+    .heroArea div h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:781px) {
+    .heroArea div h2 {
+        font-size: 25px;
+    }
+    .heroArea div p {
+        font-size: 12px;
+    }
+    .heroArea a {
+        font-size: 12px;
+    }
+    .heroArea div {
+        width: 50%;
+        margin-top: 30px;
+    }
+    .slider h1 {
+        font-size: 70px;
+    }
+    .slider h1::first-letter {
+        font-size: 100px;
+    }
+    .main .services .small {
+        display: block;
+        text-align: center;
+    }
+    .footerAllDiv {
+        display: block;
+        justify-content: space-between;
+        padding: 50px 0px;
+        overflow: hidden;
+    }
+    .footerAllDiv .footerChild:first-child {
+        width: 45% !important;
+        float: left;
+    }
+    .footerAllDiv .footerChild:nth-child(2) {
+        width: 45% !important;
+        float: right;
+    }
+    .footerAllDiv .footerChild:nth-child(3) {
+        width: 45%;
+        float: left;
+        margin-top: 100px;
+    }
+    .footerAllDiv .footerChild:last-child {
+        width: 45%;
+        float: right;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:693px) {
+    .topHeader {
+        display: block;
+        width: 70% !important;
+        margin: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+    .searchArea input[type="text"] {
+        width: 400px;
+    }
+    .searchArea {
+        width: 60% !important;
+        margin: auto;
+    }
+    .topHeader {
+        display: block;
+        width: 70%;
+        margin: auto;
+        overflow: auto;
+    }
+    .drpDwn-2 {
+        top: 57px;
+        left: 0px;
+    }
+    .bg {
+        padding-bottom: 12px;
+    }
+    .mainMenu {
+        padding: 0px 0px !important;
+        margin-top: 0px !important;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .footerAllDiv .footerChild:nth-child(3) {
+        margin-top: 20px;
+    }
+    .heroArea img {
+        width: 100%;
+    }
+    .heroArea div {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .heroArea div h2 {
+        font-size: 60px;
+    }
+    .heroArea div p {
+        font-size: 14px;
+    }
+    .heroArea a {
+        font-size: 14px;
+    }
+    .topHeader {
+        flex-direction: column;
+    }
+    .searchArea input[type="text"] {
+        width: 170%;
+    }
+    .searchArea {
+        width: 100%;
+        margin: auto;
+    }
+    .slider h1 {
+        font-size: 50px;
+    }
+    .slider h1::first-letter {
+        font-size: 70px;
+    }
+    .socialIcon {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    .topHeader {
+        display: block;
+        width: 70%;
+        margin: auto;
+        overflow: auto;
+    }
+    .drpDwn-2 {
+        top: 57px;
+        left: 0px;
+    }
+    .footerAllDiv {
+        display: block;
+        padding: 0px 0px;
+    }
+    .footerAllDiv .footerChild {
+        width: 100% !important;
+    }
+    .main {
+        display: block;
+    }
+    .main .about,
+    .services,
+    .clients {
+        width: 100% !important;
+        margin: 40px 0px;
+    }
+    .main .services .small {
+        display: flex;
+        margin-bottom: 35px;
+        text-align: left;
+    }
+    .searchArea input[type="submit"] {
+        padding-right: 10px;
+    }
+    .searchArea input[type="submit"]:hover {
+        padding-right: 10px;
+    }
+    .copy div a {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    #service {
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .topHeader {
+        display: block;
+        width: 100% !important;
+        margin: auto;
+        overflow: auto;
+    }
+    .searchArea input[type="submit"] {
+        padding-right: 10px;
+    }
+    .searchArea input[type="submit"]:hover {
+        padding-right: 10px;
+    }
+    .mainHeader {
+        flex-direction: column;
+    }
+    .socialIcon {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .copy div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:415px) {
+    .footerAllDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 0px;
+    }
+    .footerAllDiv .footerChild:first-child {
+        width: 100% !important;
+        float: none;
+    }
+    .footerAllDiv .footerChild:nth-child(2) {
+        width: 100% !important;
+        float: none;
+        margin-top: 40px;
+    }
+    .footerAllDiv .footerChild:nth-child(3) {
+        width: 100%;
+        float: none;
+        margin-top: 40px;
+    }
+    .footerAllDiv .footerChild:last-child {
+        width: 100%;
+        float: none;
+        margin-top: 40px;
+    }
+    .slider h1 {
+        font-size: 35px;
+    }
+    .slider h1::first-letter {
+        font-size: 45px;
+    }
+    .topHeader>ul>li>a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+    .searchArea input[type="submit"] {
+        padding-right: 20px;
+    }
+    .copy div a:last-child {
+        margin-top: 6px;
+    }
+    .main .about img {
+        width: 100%;
+    }
+    .main h2 {
+        text-align: center;
+    }
+    #service {
+        padding: 0px 0px;
+    }
+}
+
+
+/*@media only screen and (min-width:200px) and (max-width:791px) {
+    .heroArea img {
+        width: 80%;
+        height: 20%;
+        float: none;
+        margin: 0px auto !important;
+        text-align: center;
+        display: block;
+    }
+    .heroArea div {
+        width: 100%;
+        margin-top: 80px;
+        float: none;
+    }
+    .hero {
+        height: auto;
+    }
+    .alignLeft {
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+}*/
